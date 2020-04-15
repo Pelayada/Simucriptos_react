@@ -1,26 +1,45 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Movimientos from './Vistas/Movimientos';
+import Compras from './Vistas/Compras';
+import Estado from './Vistas/Estado';
+
+import Header from './Componentes/Header';
+import Footer from './Componentes/Footer';
+
+export default function App() {
+  return(
+    <Router>
+        <Header />
+        <LoginRoutes />
+        <Footer />
+    </Router>
+  );  
 }
 
-export default App;
+function LoginRoutes() {
+  return(
+    <Switch>
+      <Route 
+        path='/estado'
+        render={props => (
+          <Estado {...props} />
+        )}
+      />  
+      <Route 
+        path='/compras'
+        render={props => (
+          <Compras {...props} />
+        )}
+      />  
+      <Route 
+        path='/'
+        render={props => (
+          <Movimientos {...props} />
+        )}
+        default
+      />
+    </Switch>
+  );
+}

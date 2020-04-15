@@ -11,3 +11,80 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.boton_menu {
+  color: black;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+.menu {
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+}
+
+.contenido_menu {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.contenido_menu a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.menu:hover .contenido_menu {
+  display: block;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0px;
+  margin: 15px;
+}
+
+Main {
+  margin: 20px;
+}
+
+table {
+  width: 100%;
+  border: 1px solid #000;
+}
+
+th, td {
+  width: 10%;
+  text-align: left;
+  vertical-align: top;
+  border: 1px solid #000;
+  border-collapse: collapse;
+  padding: 0.3em;
+  caption-side: bottom;
+}
+
+.botones_tabla {
+  margin: 15px;
+  background-color: grey;
+  border: none;
+  color: white;
+  padding: 15px 35px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.boton_tabla {
+  text-decoration: none;
+  color: #22292f;
+}
+
